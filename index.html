@@ -1,12 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Atika Company</title>
+
+        <style>
+            body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0; }
+
+            header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;  }
+
+            nav {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;  }
+
+            nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;  }
+
+            nav ul li {
+        display: inline;
+        margin: 10px;  }
+
+            main {
+        padding: 20px;  }
+
+            footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;  }
+        </style>
+    </head>
+    <body>
+        <div class="Wrapper"></div>
+        <header>
+            <div class="logo"><a href="">Tentang Kami</a></div>
+            <div class="menu">
+                <button>Home</button>
+                <button>Our Profile</button>
+                <button>Portofolio</button>
+                <button>Message Us</button>
+            </div>
+            <h1>Hi Everyone! Welcome to my Company</h1>
+            <h2>Perumahan Nusa Bukit Indah</h2>
+            <h3>Hunian nyaman berkelas yang dibangun di atas tanah yang lebih luas. Tipe bangunan 36 sampai 120 M², di Teluk Betung, Bandar Lampung. </h3>
+        </header>
+        </div>
+            <img src="banner.png" style="width:1366px; height:578px;">
+    </body>
+    <main>
+        <body>
+            <title>Membuat Lingkaran</title>
+            <header>
+                <h3>Cabang kami di beberapa kota</h3>
+            </header>
+            <img src="Jakarta.jpeg" alt="Jakarta" style="width:200px; height:200px;">
+        </body>
+    </main>
+    <h1>Hubungi kami</h1> 
+    <form name="message-form" onsumbit="return validateForm()">
+        Nama: <input placeholder="Nama" type="text" name="full-name"   />
+        <br  />
+
+        Tanggal Lahir:
+        <input type="date" name="birth-date"  />
+        <br  />
+
+        Jenis Kelamin:
+        <input type="radio" id="male" name="gender" value="male"   />
+        <label for="male">laki-laki</label>
+        <input type="radio" id="female" name="gender" value="female"   />
+        <label for="female">Perempuan</label>
+        <br  />
+
+        Pesan:
+        <textarea placeholder="pesan" name="messages"></textarea>
+        <br  />
+
+        <input type="submit" value="Kirim" onclick="submitForm()">
+        <br  />
+    </form>
+        <script>
+        function validateForm() {
+            const name = document.forms["message-form"]["full-name"].value;
+            const birthDate = document.forms["message-form"]["birth-date"].value;
+            const gender = document.forms["message-form"]["gender"].value;
+            const message = document.forms["message-form"]["messages"].value;
+
+            if (name == "" || birthDate == "" || gender == "" || messages == "") {
+                alert("Tidak boleh kosong") ;
+                return false;
+            }
+
+        function setSenderUI(name, birthDate, gender, messages) {
+            document.getElementaryById("Sender-full-name").innerHTML = name;
+            document.getElementaryById("Sender-birth-date").innerHTML = birthDate;
+            document.getElementaryById("Sender-gender").innerHTML = gender;
+            document.getElementaryById("Sender-messages").innerHTML = messages;
+            return false;
+        }}
+
+        function validateForm() {
+            const name = document.forms["message-form"]["full-name"].value;
+            const birthDate = document.forms["message-form"]["birth-date"].value;
+            const gender = document.forms["message-form"]["gender"].value;
+            const message = document.forms["message-form"]["messages"].value;
+
+            if (name == "" || birthDate == "" || gender == "" || messages == "") {
+                alert("Tidak boleh kosong") ;
+                return false;
+            }
+
+        function setSenderUI(name, birthDate, gender, messages) {
+            document.getElementaryById("Sender-full-name").innerHTML = name;
+            document.getElementaryById("Sender-birth-date").innerHTML = birthDate;
+            document.getElementaryById("Sender-gender").innerHTML = gender;
+            document.getElementaryById("Sender-messages").innerHTML = messages;
+            return false;
+        }}
+    </script>
+    <body>
+        <div class="form-output">
+            <p>Nama: <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+            <p>Pesan: <span id="sender-message"></span></p>
+        </div>
+    </body>
+    <footer>
+        <p>Hak Cipta &copy; 2023 Atika Amalia.sweetlygurl.</p>
+    </footer>r
 </html>
